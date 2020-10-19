@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Jobs\" />
+    <Folder Include="Companies\" />
+    <Folder Include="Companies\GetCompanies\" />
+    <Folder Include="Companies\GetLogo\" />
+    <Folder Include="Jobs\GetJobs\" />
+    <Folder Include="Jobs\PostJob\" />
+    <Folder Include="Jobs\ScrapeJobs\" />
+    <Folder Include="Payments\" />
+    <Folder Include="Jobs\FeatureJob\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="FluentValidation" Version="9.2.0" />
+    <PackageReference Include="HtmlSanitizer" Version="5.0.343" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
+    <PackageReference Include="MediatR" Version="8.0.2" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Board.Core\Board.Core.csproj" />
+  </ItemGroup>
+</Project>

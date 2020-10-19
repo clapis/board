@@ -1,0 +1,18 @@
+# Ignore everything
+**
+
+# Allow files and directories
+!*.sln
+!/src/**
+!/tests/**
+
+
+# Ignore unnecessary files inside allowed directories
+**/*~
+**/*.db
+**/*.user
+**/[Bb]in/
+**/[Oo]bj/
+**/.DS_Store
+**/Properties
+**/sample.xml
