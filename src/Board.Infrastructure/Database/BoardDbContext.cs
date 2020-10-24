@@ -12,7 +12,6 @@ namespace Board.Infrastructure.Database
 {
     public class BoardDbContext : DbContext
     {
-
         public DbSet<Job> Jobs { get; set; }
 
         public DbSet<Scrape> Scrapes { get; set; }
@@ -20,7 +19,6 @@ namespace Board.Infrastructure.Database
         public DbSet<Company> Companies { get; set; }
 
         public DbSet<ReceivedPayment> ReceivedPayments { get; set; }
-
 
         private readonly DatabaseSettings _settings;
         private readonly IDomainEventDispatcher _dispatcher;
