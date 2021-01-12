@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel.Syndication;
 using System.Threading.Tasks;
@@ -12,11 +11,11 @@ namespace Board.Scrapers.StackOverflow
     {
         const string Source = "stackoverflow";
 
-        const string AtomRSS = "http://stackoverflow.com/jobs/feed?l=Netherlands&u=Km&d=20&tl=.net+.net-core+asp.net-core+c%23";
+        const string AtomRss = "http://stackoverflow.com/jobs/feed?l=Netherlands&u=Km&d=20&tl=.net+.net-core+asp.net-core+c%23";
 
         public Task<IEnumerable<ScrapedJob>> ScrapeAsync()
         {
-            using var reader = XmlReader.Create(AtomRSS);
+            using var reader = XmlReader.Create(AtomRss);
 
             var feed = SyndicationFeed.Load(reader);
 

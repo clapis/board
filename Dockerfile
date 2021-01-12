@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine AS build-env
 WORKDIR /sln
 
 # Copy solution and project files
@@ -17,7 +17,7 @@ COPY . .
 RUN dotnet publish -c Release -o publish
 
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine
 WORKDIR /app
 COPY --from=build-env /sln/publish .
 ENTRYPOINT ["dotnet", "Board.WebHost.dll"]
